@@ -49,8 +49,7 @@ def messages_by_id(id):
         return make_response(response_body, 404)
     
     if request.method == 'GET':
-        message_by_id_dict = message_by_id.to_dict()
-        return make_response(message_by_id_dict, 200)
+        return make_response(message_by_id.to_dict(), 200)
 
     elif request.method == 'PATCH':
         for attr in request.get_json():
